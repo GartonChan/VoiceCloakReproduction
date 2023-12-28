@@ -1,0 +1,2 @@
+train_set_size = 28539
+test_set_size = 2620
