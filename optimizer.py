@@ -1,10 +1,8 @@
-import numpy as np
 from CVAE import CVAE
 import torch
 import torchaudio
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
-import torch.optim.lr_scheduler as lr_scheduler
 import matplotlib.pyplot as plt
 from speechbrain.pretrained import EncoderClassifier
 import os
@@ -68,13 +66,6 @@ def extractor(Xs, delta):
     adversarial_embedding = classifier.encode_batch(Xs_1, sample_rate).to(device)
     return adversarial_embedding
 
-# def extract_embedding_from_Xs(model, Xs):
-#     Xs_path = "./tmp.wav"
-#     torchaudio.save(Xs_path, Xs, sample_rate)
-#     # extract the adversarial embedding from its wav file.
-#     embedding = extract_embedding_from_file(model, Xs_path)
-#     return torch.Tensor(embedding)
-
 def perturb_loss(delta):
     loss = torch.norm((delta - RIR_h).reshape(-1), p=2)
     return loss
@@ -87,10 +78,10 @@ def cosDis(x1, x2):
     # print("cosDis = %.8f" % ret)
     return ret
 
+# ------------------ Marginal Triplet Optimizer -----------------------
 def triplet_loss(anchor, positive, negative, k1, k2):
     triplet_loss = max((cosDis(anchor, positive) - k1), 0)    # k1 = 0.2  ->: <= 0.2
-    + max((k2 - cosDis(anchor, negative)), 0)  # k2 = 0.8  ->: >= 0.8
-    # print("triplet loss = ", triplet_loss)
+    + max((k2 - cosDis(anchor, negative)), 0)                 # k2 = 0.8  ->: >= 0.8
     return triplet_loss
 
 def save_result(file_path, delta):
@@ -128,6 +119,7 @@ class TripletOptimizer(torch.nn.Module):
 
 t_opt = TripletOptimizer(delta)
 opti = torch.optim.SGD([t_opt.delta], eta)
+
 for i in range(steps):
     print("----- Interation: {} -----".format(i))
     opti.zero_grad()
@@ -145,9 +137,7 @@ for i in range(steps):
     # print("grad of delta = ", delta.grad)
     if torch.sum(delta.grad) == 0:
         break
-    # loss.backward(retain_graph=False, create_graph=False)
     opti.step()
-    # print("sum of delta = ", torch.sum(delta))
 # --------------------------------------------------------------
 Xs = Xs.cpu()
 torchaudio.save("origin_voice.wav", Xs, sample_rate)

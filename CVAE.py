@@ -1,7 +1,5 @@
 import torch
 from torch import nn
-import torch.nn.functional as F
-import numpy as np
 import json
 from data import *
 
@@ -37,23 +35,15 @@ class Encoder (nn.Module):
         # extract y_t here for generating laten var 'z'
         y_t = torch.Tensor.chunk(x, 2, dim=2)[1].squeeze(1).squeeze(1)
         x = self.conv1(x)
-        # print(x.shape)
         x = self.bn1(x)
-        # print(x.shape)
         x = self.lRelu1(x)
-        # print(x.shape)
         x = self.conv2(x)
-        # print(x.shape)
         x = self.bn2(x)
-        # print(x.shape)
         x = self.lRelu2(x)
-        # print(x.shape)
         x = torch.reshape(x, (x.shape[0], 16*D))
         x = self.full_conn(x)
         mean = self.mean(x)
         log_cova = self.cova(x)
-        # print("mean_shape = ", mean.shape)
-        # print("cova_shape = ", cova.shape)
         return mean, log_cova, y_t
 
 
@@ -79,21 +69,15 @@ class Decoder (nn.Module):
         self.lRelu2 = nn.LeakyReLU()
     
     def forward(self, x):
-        # print("in decoder forward")
         x = self.latent(x)
-        # print(x.shape) 
         x = self.full_conn(x)
-        # print(x.shape)
         x = torch.reshape(x, (x.shape[0], 64, 1, D//4))
-        # print(x.shape)
         x = self.deconv1(x)
         x = self.bn1(x)
         x = self.lRelu1(x)
-        # print(x.shape)
         x = self.deconv2(x)
         x = self.bn2(x)
         x = self.lRelu2(x)
-        # print(x.shape)
         return x
 
 class CVAE(nn.Module):
@@ -104,20 +88,14 @@ class CVAE(nn.Module):
 
     def reparameterize(self, mean, log_cova):
         std = torch.exp(0.5 * log_cova)
-        # eplison = torch.randn(size=(mean.shape))
         eplison = torch.randn_like(std)
         z = mean + std * eplison
         return z
 
     def forward(self, x):
-        # print("cvae input_x.shape = ", x.shape)
         mean, log_cova, y_t = self.encoder(x)
-        # print("extract y_t.shape = ", y_t.shape)
         z = self.reparameterize(mean, log_cova)
-        # print("unconcatenated z.shape = ", z.shape)
         z = torch.cat((z, y_t), 1)
-        # print("latent variable z.shape = ", z.shape)
-        # z = concatenate(z, yt)
         rec_embedding = self.decoder(z)
         return mean, log_cova, rec_embedding
     
@@ -129,27 +107,19 @@ class CVAE(nn.Module):
         # z = torch.normal(0, 1, (1, D//2))
         
         z = torch.cat((z, y_t), 1)
-        # print("sampler input z:\n", z)
         rec_embedding = self.decoder(z)
         return rec_embedding
 
 def loss_fn(recon_x, x, mean, log_var, beta):
-    # kl_loss= -0.5* sum(1+ log_var - mean ** 2 - exp(log_var))
-    # print("rec_x.shape = ", recon_x)
-    # print("x.shape = ", x)
     MSECriterion = nn.MSELoss()
     recon_error = MSECriterion(recon_x, x)
     KLD = torch.sum(-0.5 * (1 + log_var - mean.pow(2) - torch.exp(log_var)))
-    # print(MSE)
-    # print(KLD)
     loss = recon_error + beta * KLD
     return loss
 
 if __name__ == '__main__':
-    # data preprocessing (json -> e_y -> e, y_t)
     training_data = []
     test_data = []
-    # with open("./train_set_all.json", "r") as f:
     with open("./train_set.json", "r") as f:
         str_data = f.read()
         training_data = json.loads(str_data)
@@ -162,11 +132,9 @@ if __name__ == '__main__':
     e_y = torch.Tensor(training_data).unsqueeze(0).permute(1, 0, 2, 3)
     e_y_test = torch.Tensor(test_data).unsqueeze(0).permute(1, 0, 2, 3)
     
-    # print("e_y.shape = ", e_y.shape)
     D = e_y.shape[3]
     data_size = e_y.shape[0]
     batch_data = data_loader(e_y, 32)
-    # print(batch_data.shape)
 
 
     # ----------- initial setting -----------
