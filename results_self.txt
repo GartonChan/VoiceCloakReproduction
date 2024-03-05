@@ -1,0 +1,119 @@
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0009.wav
+similarity between Anchor and Positive(Target):  tensor(0.7673, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.2238, device='cuda:0')
+similarity between origin and target:  tensor(-0.0440, device='cuda:0')
+stoi: 0.5561125689707844
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0001.wav
+similarity between Anchor and Positive(Target):  tensor(0.8068, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.1776, device='cuda:0')
+similarity between origin and target:  tensor(-0.0447, device='cuda:0')
+stoi: 0.5643882184117359
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0008.wav
+similarity between Anchor and Positive(Target):  tensor(0.8254, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.1902, device='cuda:0')
+similarity between origin and target:  tensor(-0.0353, device='cuda:0')
+stoi: 0.5180846341364502
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0000.wav
+similarity between Anchor and Positive(Target):  tensor(0.8086, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.3047, device='cuda:0')
+similarity between origin and target:  tensor(0.0605, device='cuda:0')
+stoi: 0.5877278447208184
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0004.wav
+similarity between Anchor and Positive(Target):  tensor(0.7593, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.2019, device='cuda:0')
+similarity between origin and target:  tensor(0.0419, device='cuda:0')
+stoi: 0.5610033298007432
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0005.wav
+similarity between Anchor and Positive(Target):  tensor(0.7534, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.1571, device='cuda:0')
+similarity between origin and target:  tensor(-0.0418, device='cuda:0')
+stoi: 0.5496905963049763
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0007.wav
+similarity between Anchor and Positive(Target):  tensor(0.7819, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.1987, device='cuda:0')
+similarity between origin and target:  tensor(-0.0361, device='cuda:0')
+stoi: 0.5088761885443891
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0006.wav
+similarity between Anchor and Positive(Target):  tensor(0.8100, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.2499, device='cuda:0')
+similarity between origin and target:  tensor(0.0643, device='cuda:0')
+stoi: 0.5658431248867206
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0002.wav
+similarity between Anchor and Positive(Target):  tensor(0.8077, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.0572, device='cuda:0')
+similarity between origin and target:  tensor(-0.0091, device='cuda:0')
+stoi: 0.5833011353175848
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/HLJ/en/HLJ-en-0003.wav
+similarity between Anchor and Positive(Target):  tensor(0.7619, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.3085, device='cuda:0')
+similarity between origin and target:  tensor(0.0419, device='cuda:0')
+stoi: 0.5795328319401173
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0000.wav
+similarity between Anchor and Positive(Target):  tensor(0.8092, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.2656, device='cuda:0')
+similarity between origin and target:  tensor(0.0262, device='cuda:0')
+stoi: 0.5367630262852626
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0005.wav
+similarity between Anchor and Positive(Target):  tensor(0.7959, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.1770, device='cuda:0')
+similarity between origin and target:  tensor(-0.0711, device='cuda:0')
+stoi: 0.4827392758751867
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0004.wav
+similarity between Anchor and Positive(Target):  tensor(0.8103, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.2375, device='cuda:0')
+similarity between origin and target:  tensor(-0.0214, device='cuda:0')
+stoi: 0.5005206404025742
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0006.wav
+similarity between Anchor and Positive(Target):  tensor(0.8141, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.2050, device='cuda:0')
+similarity between origin and target:  tensor(0.0330, device='cuda:0')
+stoi: 0.5224789211602053
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0001.wav
+similarity between Anchor and Positive(Target):  tensor(0.8092, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.1334, device='cuda:0')
+similarity between origin and target:  tensor(-0.1092, device='cuda:0')
+stoi: 0.4795474510459782
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0008.wav
+similarity between Anchor and Positive(Target):  tensor(0.7226, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.3680, device='cuda:0')
+similarity between origin and target:  tensor(0.0208, device='cuda:0')
+stoi: 0.48565741758676717
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0003.wav
+similarity between Anchor and Positive(Target):  tensor(0.7996, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.1487, device='cuda:0')
+similarity between origin and target:  tensor(-0.0531, device='cuda:0')
+stoi: 0.3983028269482597
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0009.wav
+similarity between Anchor and Positive(Target):  tensor(0.8156, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(-0.0006, device='cuda:0')
+similarity between origin and target:  tensor(-0.0984, device='cuda:0')
+stoi: 0.45085028278643857
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0002.wav
+similarity between Anchor and Positive(Target):  tensor(0.7983, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.1432, device='cuda:0')
+similarity between origin and target:  tensor(-0.1060, device='cuda:0')
+stoi: 0.45210075970054475
+
+working on: /home/compassmp/workspace/vc-selfSampling/voiceCloakReproduction/selfSampling/CJT/en/CJT-en-0007.wav
+similarity between Anchor and Positive(Target):  tensor(0.6611, device='cuda:0')
+similarity between Anchor and Negative(Origin):  tensor(0.3871, device='cuda:0')
+similarity between origin and target:  tensor(0.0137, device='cuda:0')
+stoi: 0.4014339417909142

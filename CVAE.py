@@ -155,39 +155,27 @@ if __name__ == '__main__':
             total_loss = 0.00
             optimizer.zero_grad()
             batch_data = data_loader(train_set, batchSize)
-            # print("batch_data.shape = ", batch_data.shape)
             embeddings = torch.Tensor.chunk(batch_data,
                     2, dim=2)[1].squeeze(1).squeeze(1)
-            # print(embeddings.shape)
             if torch.cuda.is_available():
                 batch_data = batch_data.to('cuda')
                 embeddings = embeddings.to('cuda')
             # forward propogation
             mean, log_cova, rec_e = cvae(batch_data)
-            # print(mean.shape)
-            # print(log_cova.shape)
             rec_e = rec_e.reshape((-1, 192))
-            # print(rec_e.shape)
             # calculate loss
             loss = loss_fn(rec_e, embeddings, mean, log_cova, beta)
             total_loss += loss.item()
-            # print("loss: ", loss)
             
             # performance on test_data
             test_batch = data_loader(test_set, batchSize)
-            # print(test_batch.shape)
             test_embeddings = torch.Tensor.chunk(test_batch,
                     2, dim=2)[1].squeeze(1).squeeze(1)
-            # print(test_batch.shape)
-            # print("test_embeddings.shape", test_embeddings.shape)
             if torch.cuda.is_available():
                 test_batch = test_batch.to('cuda')
                 test_embeddings = test_embeddings.to('cuda')
             test_m, test_c, test_r_e = cvae(test_batch)
             test_r_e = test_r_e.reshape((-1, D))
-            # print(test_m.shape)
-            # print(test_c.shape)
-            # print(test_r_e.shape)
             
             test_loss = loss_fn(test_r_e, test_embeddings, test_m, test_c, beta)
             
@@ -197,7 +185,6 @@ if __name__ == '__main__':
             
             # log
             print('Epoch [{}/{}], Train Loss: {:.4f}, Test Loss: {:.4f}'.format(epoch+1, num_epochs, total_loss / batchSize, test_loss.item()/batchSize))
-            # print('Epoch [{}/{}], Train Loss: {:.4f}'.format(epoch+1, num_epochs, total_loss / batchSize ))
 
     train(e_y, e_y_test, batchSize, iteration)
     torch.save(cvae.state_dict(), './cvae_weights.pth')

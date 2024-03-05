@@ -1,0 +1,100 @@
+Original audio: HLJ-en-0009.wav
+Original word error rate: 0.18181818181818182
+Processed word error rate: 1.7272727272727273
+WAD:  1.5454545454545454
+
+Original audio: HLJ-en-0001.wav
+Original word error rate: 0.15384615384615385
+Processed word error rate: 1.3076923076923077
+WAD:  1.1538461538461537
+
+Original audio: HLJ-en-0008.wav
+Original word error rate: 0.23076923076923078
+Processed word error rate: 1.0769230769230769
+WAD:  0.846153846153846
+
+Original audio: HLJ-en-0000.wav
+Original word error rate: 0.0
+Processed word error rate: 0.9230769230769231
+WAD:  0.9230769230769231
+
+Original audio: HLJ-en-0004.wav
+Original word error rate: 0.2
+Processed word error rate: 1.2666666666666666
+WAD:  1.0666666666666667
+
+Original audio: HLJ-en-0005.wav
+Original word error rate: 0.5
+Processed word error rate: 0.9166666666666666
+WAD:  0.41666666666666663
+
+Original audio: HLJ-en-0007.wav
+Original word error rate: 0.09090909090909091
+Processed word error rate: 1.1818181818181819
+WAD:  1.090909090909091
+
+Original audio: HLJ-en-0006.wav
+Original word error rate: 0.0
+Processed word error rate: 1.0714285714285714
+WAD:  1.0714285714285714
+
+Original audio: HLJ-en-0002.wav
+Original word error rate: 0.5714285714285714
+Processed word error rate: 1.5
+WAD:  0.9285714285714286
+
+Original audio: HLJ-en-0003.wav
+Original word error rate: 0.26666666666666666
+Processed word error rate: 1.2666666666666666
+WAD:  1.0
+
+Original audio: CJT-en-0000.wav
+Original word error rate: 0.23529411764705882
+Processed word error rate: 0.8235294117647058
+WAD:  0.588235294117647
+
+Original audio: CJT-en-0005.wav
+Original word error rate: 0.16666666666666666
+Processed word error rate: 1.1666666666666667
+WAD:  1.0
+
+Original audio: CJT-en-0004.wav
+Original word error rate: 0.09090909090909091
+Processed word error rate: 1.3636363636363635
+WAD:  1.2727272727272727
+
+Original audio: CJT-en-0006.wav
+Original word error rate: 0.0
+Processed word error rate: 0.8571428571428571
+WAD:  0.8571428571428571
+
+Original audio: CJT-en-0001.wav
+Original word error rate: 0.18181818181818182
+Processed word error rate: 1.1818181818181819
+WAD:  1.0
+
+Original audio: CJT-en-0008.wav
+Original word error rate: 0.14285714285714285
+Processed word error rate: 0.9285714285714286
+WAD:  0.7857142857142858
+
+Original audio: CJT-en-0003.wav
+Original word error rate: 0.1
+Processed word error rate: 1.6
+WAD:  1.5
+
+Original audio: CJT-en-0009.wav
+Original word error rate: 0.2222222222222222
+Processed word error rate: 1.2222222222222223
+WAD:  1.0
+
+Original audio: CJT-en-0002.wav
+Original word error rate: 1.0
+Processed word error rate: 1.3333333333333333
+WAD:  0.33333333333333326
+
+Original audio: CJT-en-0007.wav
+Original word error rate: 0.11764705882352941
+Processed word error rate: 1.2352941176470589
+WAD:  1.1176470588235294
+

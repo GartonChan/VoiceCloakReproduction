@@ -1,4 +1,5 @@
 *.log
-*.txt
 *.json
 *.pyc
+.vscode
+pretrained_models
